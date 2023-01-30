@@ -1,0 +1,15 @@
+nav {
+  display: flex;
+  height: 120px;
+  background-color: #4056A1;
+  padding: 0 1.5em 0 1.5em;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #fff;
+}
+
+#logo {
+  font-family: 'Bungee', sans-serif;
+}
