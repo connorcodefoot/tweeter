@@ -1,0 +1,30 @@
+.new-tweet {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+}
+
+#tweet-text {
+  width: 100%;
+  height: 80px;
+  line-height: 60px;
+  border: 10px;
+    background-color: inherit;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+  font-weight: 800;
+}
+
+.new-tweet-submit {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
