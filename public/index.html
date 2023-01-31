@@ -51,7 +51,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+      <container class="new-tweet">
         <form method="POST" action="/tweets">
           <label for="tweet-text"><h4>What are you humming about?</h4></label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -60,17 +60,18 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-      </section>
+      </container>
 
-      <section>
         <container>
-          <article>
-            <header>This is a header</header>
+          <article class="tweet">
+            <header>
+              <div>Newton</div>
+              <div>@sirIsaac</div>
+            </header>
             this is the body
             <footer>this is the footer</footer>
           </article>
         </container>
-      </section>
     </main>
   </body>
 </html>
