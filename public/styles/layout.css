@@ -19,11 +19,26 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1em 0em 1em 0em
+}
+ 
+ 
+ 
+ 
+ 
  main {
   display: flex;
   width: 90%;
@@ -39,5 +54,4 @@ body {
   color: #fff;
   border: none;
   cursor: pointer;
-  
 }
