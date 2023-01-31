@@ -29,6 +29,7 @@ body {
   width: 90%;
   margin: auto;
   justify-content: center;
+  flex-direction: column;
   background-color: inherit;
  }
 
