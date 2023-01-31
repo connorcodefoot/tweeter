@@ -1,19 +1,18 @@
-$(document).ready(function() {
-  
-  let tweetText = document.getElementById('tweet-text')
+$(document).ready(function () {
 
-  tweetText.addEventListener('input', function() {
 
-    const counter = document.getElementsByClassName('counter')
-    let count = 140 - $(this).val().length
-    $(counter).html(count)
+  // This function monitors the textarea input for new tweet and reduces the remaining character count accordingly
 
-    if(count < 0) {
-      $(counter).css('color', 'red')
-    } 
-    if(count >= 0) {
-      $(counter).css('color', '')
+  $('#tweet-text').on('input', function () {
+
+    let count = 140 - $(this).val().length;
+    $('.counter').html(count);
+
+    if (count < 0) {
+      $('.counter').css('color', 'red');
     }
-  })
-
+    if (count >= 0) {
+      $('.counter').css('color', '');
+    }
+  });
 });
