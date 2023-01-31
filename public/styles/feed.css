@@ -1,0 +1,32 @@
+
+article.tweet {
+  border: 5px;
+  background-color: inherit;
+  border-style: solid;
+  margin-top: 2em;
+  
+}
+
+article .tweet-card{
+  padding: 1em 1em 1em 1em;
+}
+
+article.tweet header {
+  display: flex;
+  justify-content: space-between;
+}
+
+article.tweet .tweet-content {
+  display: flex;
+  align-items: center;
+  height: 90px;
+}
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+article.tweet footer .tweet-card-icons i{
+  padding: 5px;
+}
