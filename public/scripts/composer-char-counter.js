@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-  // This function monitors the textarea input for new tweet and reduces the remaining character count accordingly
+  // This function tracks the number of characters a user has entered and adjusts the user facing character count accordingly
 
   $('#tweet-text').on('input', function () {
 
@@ -10,9 +10,8 @@ $(document).ready(function () {
 
     if (count < 0) {
       $('.counter').css('color', 'red');
-    }
-    if (count >= 0) {
+    } else {
       $('.counter').css('color', '');
     }
-  });
+  })
 });
