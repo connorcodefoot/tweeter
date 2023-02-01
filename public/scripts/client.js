@@ -33,6 +33,8 @@ const data = [
   }
 ];
 
+// Receives an object, outputs a block of html that uses data from the object.
+
 function createTweetElement(obj) {
 
   let newElement =
@@ -59,6 +61,7 @@ function createTweetElement(obj) {
   return newElement;
 };
 
+// Takes in an array of data. Each element is created into a block of html through createTweetelement. The return data is then appended to the feed.
 function renderTweets(arr) {
 
   arr.forEach((curr) => {
@@ -69,6 +72,7 @@ function renderTweets(arr) {
 renderTweets(data);
 
 
+// Prevent submission for new tweets
 $('#submit-tweet').submit(function(event){
   if(event) { 
      event.preventDefault();  
