@@ -12,8 +12,9 @@
 function createTweetElement (obj) {
 
   $(document).ready(function () {
+    
     let newElement = 
-    '<article class="tweet"><div class ="tweet-card"><header><div class="tweetBy">Newton</div><div class="tweetByhandle">@sirIsaac</div></header><div class="tweet-content"><h4> If I her\'s of giants</h4></div><hr><footer><div class="date">10 Days Ago</div><div class="tweet-card-icons"><i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></div></footer></div></article>'
+    `<article class="tweet"><div class ="tweet-card"><header><div class="tweetBy">${obj.user.name}</div><div class="tweetByhandle">${obj.user.handle}</div></header><div class="tweet-content"><h4>${obj.content.text}</h4></div><hr><footer><div class="date">${obj.created_at}</div><div class="tweet-card-icons"><i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></div></footer></div></article>`
     return $('.feed').append(newElement); 
   })
 }
@@ -28,12 +29,12 @@ function createTweetElement (obj) {
 // Test / driver code (temporary). Eventually will get this from the server.
 const tweetData = {
   "user": {
-    "name": "Newton",
+    "name": "JOJON",
     "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
+    "handle": "@SirIsaac"
     },
   "content": {
-      "text": "BABABOOYEE"
+    "text": "BABABOOYEE"
     },
   "created_at": 1461116232227
 }
