@@ -33,7 +33,7 @@ $(document).ready(function () {
         </div>
         <hr>
         <footer>
-        <div class="date">${obj.created_at}</div>
+        <div class="date">${timeago.format(obj.created_at)}</div>
         <div class="tweet-card-icons">
         <i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></div></footer>
       </div>
