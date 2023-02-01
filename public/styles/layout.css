@@ -35,10 +35,6 @@ h6 {
   margin: 1em 0em 1em 0em
 }
  
- 
- 
- 
- 
  main {
   display: flex;
   width: 90%;
@@ -53,5 +49,12 @@ h6 {
   background-color: #4056A1;
   color: #fff;
   border: none;
+  border-radius: 30px;
   cursor: pointer;
+  padding: 10px;
+}
+
+hr {
+  height: 4px;
+  background-color: rgb(133, 133, 133)
 }
