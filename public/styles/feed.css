@@ -1,15 +1,32 @@
 
+.feed {
+  display: flex;
+  justify-content: center;
+
+}
+
 article.tweet {
-  border: 5px;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  border: 3px, ;
+  border-color: #4056A1;
+  border-radius: 30px;
   background-color: inherit;
   border-style: solid;
   margin-top: 2em;
-  
+  transition: all .5s ease-in-out;
 }
 
-article .tweet-card{
+article.tweet:hover { 
+  transform: scale(1.1);
+}
+  
+
+.tweet-card{
   padding: 1em 1em 1em 1em;
 }
+
 
 article.tweet header {
   display: flex;
@@ -25,8 +42,14 @@ article.tweet .tweet-content {
 article.tweet footer {
   display: flex;
   justify-content: space-between;
+  color: #4056A1;
+  font-size: .75em;
 }
 
 article.tweet footer .tweet-card-icons i{
   padding: 5px;
+}
+
+article.tweet footer .tweet-card-icons i:hover{
+  color: orange;
 }
