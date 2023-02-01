@@ -4,14 +4,17 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Fake data taken from initial-tweets.json
 $(document).ready(function () {
 
   function loadTweets() {
 
-    $.get('/tweets').done((data) => {
+    $.get('/tweets')
+    .done((data) => {
       renderTweets(data);
-    });
+    })
+    .fail(() => {
+      $('.feed').append('There was an error loading tweets')
+    })
 
   };
   // Receives an object, outputs a block of html that uses data from the object.
@@ -45,7 +48,8 @@ $(document).ready(function () {
   // Takes in an array of data. Each element is created into a block of html through createTweetelement. The return data is then appended to the feed.
   function renderTweets(data) {
 
-    data.forEach((curr) => {
+    const processedData = data.reverse()
+    processedData.forEach((curr) => {
       $('.feed').append(createTweetElement(curr));
     });
   }
@@ -57,7 +61,7 @@ $(document).ready(function () {
     }
 
     $.post('/tweets', ($(this).serialize()));
-
+    
   });
 
   loadTweets();
