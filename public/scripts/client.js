@@ -7,38 +7,19 @@
 // Fake data taken from initial-tweets.json
 $(document).ready(function () {
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
+  function loadTweets() {
 
-// Receives an object, outputs a block of html that uses data from the object.
+    $.get('/tweets').done((data) => {
+      renderTweets(data);
+    });
 
-function createTweetElement(obj) {
+  };
+  // Receives an object, outputs a block of html that uses data from the object.
 
-  let newElement =
-    `<article class="tweet">
+  function createTweetElement(obj) {
+
+    let newElement =
+      `<article class="tweet">
       <div class ="tweet-card">
         <header> 
           <div>
@@ -57,28 +38,29 @@ function createTweetElement(obj) {
         <i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></div></footer>
       </div>
     </article>`;
-    
-  return newElement;
-};
 
-// Takes in an array of data. Each element is created into a block of html through createTweetelement. The return data is then appended to the feed.
-function renderTweets(arr) {
+    return newElement;
+  };
 
-  arr.forEach((curr) => {
-    $('.feed').append(createTweetElement(curr));
-  });
-}
+  // Takes in an array of data. Each element is created into a block of html through createTweetelement. The return data is then appended to the feed.
+  function renderTweets(data) {
 
-renderTweets(data);
-
-
-// Prevent submission for new tweets, then submit serialized data (querystring) to server
-$('#submit-tweet').submit(function(event){
-  if(event) { 
-     event.preventDefault();  
+    data.forEach((curr) => {
+      $('.feed').append(createTweetElement(curr));
+    });
   }
-  
-  $.post('/tweets', ($(this).serialize()))  
 
-})
+  // Prevent submission for new tweets, then submit serialized data (querystring) to server
+  $('#submit-tweet').submit(function (event) {
+    if (event) {
+      event.preventDefault();
+    }
+
+    $.post('/tweets', ($(this).serialize()));
+
+  });
+
+  loadTweets();
 });
+
+
