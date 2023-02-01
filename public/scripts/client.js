@@ -72,11 +72,13 @@ function renderTweets(arr) {
 renderTweets(data);
 
 
-// Prevent submission for new tweets
+// Prevent submission for new tweets, then submit serialized data (querystring) to server
 $('#submit-tweet').submit(function(event){
   if(event) { 
      event.preventDefault();  
-  }  
-})
+  }
+  
+  $.post('/tweets', ($(this).serialize()))  
 
+})
 });
