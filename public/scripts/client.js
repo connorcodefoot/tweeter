@@ -36,18 +36,43 @@ const data = [
 function createTweetElement(obj) {
 
   let newElement =
-    `<article class="tweet"><div class ="tweet-card"><header> <div>
-    <span class="avatar"><img src="${obj.user.avatars}"></span><span class="tweetBy">${obj.user.name}</span></div><div class="tweetByhandle">${obj.user.handle}</div></header><div class="tweet-content"><h4>${obj.content.text}</h4></div><hr><footer><div class="date">${obj.created_at}</div><div class="tweet-card-icons"><i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></div></footer></div></article>`;
+    `<article class="tweet">
+      <div class ="tweet-card">
+        <header> 
+          <div>
+            <span class="avatar">
+            <img src="${obj.user.avatars}"></span>
+            <span class="tweetBy">${obj.user.name}</span>
+          </div>
+          <div class="tweetByhandle">${obj.user.handle}</div>
+        </header>
+        <div class="tweet-content"><h4>${obj.content.text}</h4>
+        </div>
+        <hr>
+        <footer>
+        <div class="date">${obj.created_at}</div>
+        <div class="tweet-card-icons">
+        <i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></div></footer>
+      </div>
+    </article>`;
+    
   return newElement;
 };
 
 function renderTweets(arr) {
 
   arr.forEach((curr) => {
-    console.log(curr);
     $('.feed').append(createTweetElement(curr));
   });
 }
 
 renderTweets(data);
+
+
+$('#submit-tweet').submit(function(event){
+  if(event) { 
+     event.preventDefault();  
+  }  
+})
+
 });
