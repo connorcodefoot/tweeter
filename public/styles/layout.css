@@ -53,6 +53,12 @@ h6 {
   cursor: pointer;
   padding: 10px;
 }
+.primary-button:hover{
+  background-color: orange;
+}
+
+
+
 
 hr {
   height: 4px;
