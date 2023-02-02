@@ -70,12 +70,24 @@ $(document).ready(function () {
       return alert('You tried to tweet nothing. Please add some content')
     }
 
-    $.post('/tweets', ($(this).serialize())).done(() => {
-        $.get('/tweets').done((data) => {
-          $('.feed').prepend(createTweetElement((data[data.length - 1])))
-        });
+    
+
+    $.post('/tweets', (tweet.serialize())).done(() => {
+      $.get('/tweets').done((data) => {
+        $('.feed').prepend(createTweetElement((data[data.length - 1]))).hide().fadeIn('slow')
       });
     });
+
+    // Reset Form and counter
+    $('#submit-tweet').trigger("reset");
+    $('.counter').html('140');
+
+  });
+
+  // Error Modal
+  $('.button').bind('click', function() {
+    $('.modal').addClass('hide');
+  });
 
 
   loadTweets();
