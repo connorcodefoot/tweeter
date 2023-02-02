@@ -18,6 +18,7 @@ article.tweet {
   border-style: solid;
   margin-top: 2em;
   transition: all .5s ease-in-out;
+  z-index: 1;
 }
 
 article.tweet:hover { 
