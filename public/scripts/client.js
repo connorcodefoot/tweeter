@@ -74,37 +74,17 @@ $(document).ready(function () {
       console.log($('#tweet-text').val())
     }
 
-<<<<<<< HEAD
-    
-
-    $.post('/tweets', (tweet.serialize())).done(() => {
-=======
     $.post('/tweets', ($(this).serialize())).done(() => {
->>>>>>> feature/top-button
       $.get('/tweets').done((data) => {
         $('.feed').prepend(createTweetElement((data[data.length - 1]))).hide().fadeIn('slow')
       });
     });
 
-<<<<<<< HEAD
-    // Reset Form and counter
-    $('#submit-tweet').trigger("reset");
-    $('.counter').html('140');
-
-  });
-
-  // Error Modal
-  $('.button').bind('click', function() {
-    $('.modal').addClass('hide');
-  });
-
-=======
     $('#submit-tweet')[0].reset();
     $('.counter').html('140')
 
   });
 
->>>>>>> feature/top-button
 
   loadTweets();
 });
