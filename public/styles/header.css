@@ -8,4 +8,5 @@
   flex-direction: column;
   background-color: #EBFCFB;
   background-image: url(/images/church.png);
+  z-index: 1000;
 }
