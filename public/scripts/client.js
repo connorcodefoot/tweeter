@@ -70,41 +70,18 @@ $(document).ready(function () {
       return $('.error').html('You tried to tweet nothing. Please add some content : )').fadeOut(4000)
     }
 
-    if($('#tweet-text').val()) {
-      console.log($('#tweet-text').val())
-    }
 
-<<<<<<< HEAD
-    
-
-    $.post('/tweets', (tweet.serialize())).done(() => {
-=======
     $.post('/tweets', ($(this).serialize())).done(() => {
->>>>>>> feature/top-button
       $.get('/tweets').done((data) => {
         $('.feed').prepend(createTweetElement((data[data.length - 1]))).hide().fadeIn('slow')
       });
     });
 
-<<<<<<< HEAD
     // Reset Form and counter
     $('#submit-tweet').trigger("reset");
     $('.counter').html('140');
 
   });
-
-  // Error Modal
-  $('.button').bind('click', function() {
-    $('.modal').addClass('hide');
-  });
-
-=======
-    $('#submit-tweet')[0].reset();
-    $('.counter').html('140')
-
-  });
-
->>>>>>> feature/top-button
 
   loadTweets();
 });
