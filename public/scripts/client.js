@@ -54,10 +54,19 @@ $(document).ready(function () {
     });
   }
 
-  // Prevent submission for new tweets, then submit serialized data (querystring) to server
+  // Prevent default form submission for new tweets then submit serialized data (querystring) to server. It also includes error messaging for empty tweets or a tweet that exceeds the # of characters available.
+  
   $('#submit-tweet').submit(function (event) {
     if (event) {
       event.preventDefault();
+    }
+
+    if($('.counter').val() < 0) {
+      return alert('Please reduce your tweet to a maximum of 140 characters')
+    }
+
+    if($('.counter').val() === '140') {
+      return alert('You tried to tweet nothing. Please add some content')
     }
 
     $.post('/tweets', ($(this).serialize()));
