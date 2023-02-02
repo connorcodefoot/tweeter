@@ -63,21 +63,30 @@ $(document).ready(function () {
     }
 
     if($('.counter').val() < 0) {
-      return alert('Please reduce your tweet to a maximum of 140 characters')
+      return $('.error').html('Easy cowboy, that is too many characters').fadeOut(4000)
     }
 
     if($('.counter').val() === '140') {
-      return alert('You tried to tweet nothing. Please add some content')
+      return $('.error').html('You tried to tweet nothing. Please add some content : )').fadeOut(4000)
     }
 
+    if($('#tweet-text').val()) {
+      console.log($('#tweet-text').val())
+    }
+
+<<<<<<< HEAD
     
 
     $.post('/tweets', (tweet.serialize())).done(() => {
+=======
+    $.post('/tweets', ($(this).serialize())).done(() => {
+>>>>>>> feature/top-button
       $.get('/tweets').done((data) => {
         $('.feed').prepend(createTweetElement((data[data.length - 1]))).hide().fadeIn('slow')
       });
     });
 
+<<<<<<< HEAD
     // Reset Form and counter
     $('#submit-tweet').trigger("reset");
     $('.counter').html('140');
@@ -89,6 +98,13 @@ $(document).ready(function () {
     $('.modal').addClass('hide');
   });
 
+=======
+    $('#submit-tweet')[0].reset();
+    $('.counter').html('140')
+
+  });
+
+>>>>>>> feature/top-button
 
   loadTweets();
 });
