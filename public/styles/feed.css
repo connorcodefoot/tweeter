@@ -9,20 +9,20 @@
 
 article.tweet {
   display: flex;
+  width: 90%;
+  margin: 2em 2em 1em 2em;
   justify-content: center;
-  width: 80%;
   border: 3px, ;
   border-color: #4056A1;
   border-radius: 30px;
   background-color: inherit;
   border-style: solid;
-  margin-top: 2em;
   transition: all .5s ease-in-out;
   z-index: 1;
 }
 
 article.tweet:hover { 
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
   
 

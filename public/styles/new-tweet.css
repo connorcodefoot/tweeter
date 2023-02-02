@@ -1,19 +1,4 @@
-
-
-.new-tweet{
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  margin: auto;
-}
-
-form {
-  width: 100%;
-}
-
 #tweet-text {
-  width: 100%;
-  height: 70px;
   border: 10px;
     background-color: inherit;
     border-top-style: hidden;
@@ -24,14 +9,13 @@ form {
 }
 
 .new-tweet-submit {
-  display: flex;
-  justify-content: space-between;
   font-family: 'Bungee', sans-serif;
 }
 
 .error {
   color: red;
-  font-size: .75em;
+  font-size: .5em;
+  padding: 1em 1em 1em 1em;
 }
 
 

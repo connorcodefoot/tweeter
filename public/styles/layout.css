@@ -11,22 +11,75 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
-  
 }
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- 
+
+/*************************** DESKTOP  ******************************/
+
+@media screen 
+and (min-device-width: 1024px)  { 
+
+  nav{
+    background-color: #4056A1;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 100%;
+  }
+
+  .page-header {
+    flex: 1 1 50%;
+    justify-content: center;
+  }
+
+  .page-header-content {
+    margin: 7em 3em 3em 3em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("church.png");
+    background-color: orange; 
+  }
+
+  .new-tweet {
+    flex: 1 1 50%;
+    margin-top: 7em;
+  }
+
+  #submit-tweet {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+
+  .new-tweet-submit {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1em;
+  }
+
+  #tweet-text {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+/*************************** IPAD PORTRAIT AND LOWER **************************/
+
+
 h1,
 h2,
 h3,
@@ -35,15 +88,6 @@ h5,
 h6 {
   margin: 1em 0em 1em 0em
 }
- 
- main {
-  display: flex;
-  width: 90%;
-  margin: auto;
-  justify-content: center;
-  flex-direction: column;
-  background-color: inherit;
- }
 
  .primary-button {
   font-family: 'Bungee', sans-serif;
