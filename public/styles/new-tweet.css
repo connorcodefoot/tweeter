@@ -1,4 +1,6 @@
 #tweet-text {
+  width: 80%;
+  margin: auto;
   border: 10px;
     background-color: inherit;
     border-top-style: hidden;
@@ -10,6 +12,20 @@
 
 .new-tweet-submit {
   font-family: 'Bungee', sans-serif;
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1em;
+}
+
+
+#submit-tweet {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
 }
 
 .error {
