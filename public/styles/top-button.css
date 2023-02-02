@@ -12,6 +12,7 @@
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
+  font-family: 'Bungee', sans-serif;
 }
 
 #topBtn:hover {
