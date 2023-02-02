@@ -15,3 +15,11 @@ nav {
 #logo {
   font-family: 'Bungee', sans-serif;
 }
+
+.fa-solid .fa-angles-down {
+  cursor: pointer;
+}
+
+.fa-solid .fa-angles-down :hover {
+  color: orange;
+}
