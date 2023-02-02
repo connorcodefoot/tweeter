@@ -70,7 +70,6 @@ $(document).ready(function () {
       return $('.error').html('You tried to tweet nothing. Please add some content : )').fadeOut(4000)
     }
 
-
     $.post('/tweets', ($(this).serialize())).done(() => {
       $.get('/tweets').done((data) => {
         $('.feed').prepend(createTweetElement((data[data.length - 1]))).hide().fadeIn('slow')
