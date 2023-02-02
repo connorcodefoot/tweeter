@@ -29,5 +29,10 @@ form {
   font-family: 'Bungee', sans-serif;
 }
 
+.error {
+  color: red;
+  font-size: .75em;
+}
+
 
 
