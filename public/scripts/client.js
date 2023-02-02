@@ -17,6 +17,7 @@ $(document).ready(function () {
     })
 
   };
+
   // Receives an object, outputs a block of html that uses data from the object.
 
   function createTweetElement(obj) {
@@ -69,11 +70,13 @@ $(document).ready(function () {
       return alert('You tried to tweet nothing. Please add some content')
     }
 
-    $.post('/tweets', ($(this).serialize()));
-    
-  });
+    $.post('/tweets', ($(this).serialize())).done(() => {
+        $.get('/tweets').done((data) => {
+          $('.feed').prepend(createTweetElement((data[data.length - 1])))
+        });
+      });
+    });
+
 
   loadTweets();
 });
-
-
