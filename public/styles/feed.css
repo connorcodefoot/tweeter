@@ -25,12 +25,10 @@ article.tweet:hover {
   transform: scale(1.05);
 }
   
-
 .tweet-card{
   padding: 1em 1em 1em 1em;
   min-width: 100%;
 }
-
 
 article.tweet header {
   display: flex;
