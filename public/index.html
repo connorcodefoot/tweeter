@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/feed.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/top-button.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -29,6 +30,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/new-tweet-form.js"></script>
+    <script type="text/javascript" src="/scripts/top-button.js"></script>
   </head>
 
 
@@ -60,13 +62,14 @@
           <textarea name="text" id="tweet-text"></textarea>
           <div class="new-tweet-submit">
             <button class="primary-button" type="submit">Tweet</button>
+            <div class="error"></div>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </container>
-
-        <container class="feed">
-        </container>
+      <container class="feed">
+      </container>
+      <button id="topBtn" title="Go to top">Top</i></button>
     </main>
   </body>
 </html>
