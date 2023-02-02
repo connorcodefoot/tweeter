@@ -53,9 +53,15 @@ h6 {
   border-radius: 30px;
   cursor: pointer;
   padding: 10px;
+  box-shadow: 0 5px #666;
 }
 .primary-button:hover{
   background-color: orange;
+}
+.primary-button:active {
+  background-color: orange;
+  box-shadow: 0 5px orange;
+  transform: translateY(4px);
 }
 
 hr {
