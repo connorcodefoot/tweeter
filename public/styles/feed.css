@@ -37,10 +37,9 @@ article.tweet header {
 }
 
 article.tweet .tweet-content {
-  display: flex;
-  align-items: center;
   height: 90px;
   min-width: 100%;
+  overflow-wrap: break-word;
 }
 
 article.tweet footer {
