@@ -1,8 +1,5 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+
+/************************** Inherited from repo (don't touch) ****************/
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -16,9 +13,6 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 
 /*************************** DESKTOP  ******************************/
 
@@ -49,17 +43,7 @@ body {
   }
 }
 
-/* ALL SCREENS ********/
-
-.page-header-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image: url("church.png");
-  background-color: orange; 
-  padding: 1em;
-}
-
+/*************************** GENERAL  ******************************/
 
 h1,
 h2,
@@ -70,7 +54,7 @@ h6 {
   margin: 1em 0em 1em 0em
 }
 
- .primary-button {
+.primary-button {
   font-family: 'Bungee', sans-serif;
   background-color: #4056A1;
   color: #fff;
