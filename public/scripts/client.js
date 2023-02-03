@@ -8,10 +8,24 @@
   };
 
 // Resets tweet form text and counter
-  const formReset = () => {
-    $('#submit-tweet').trigger("reset");
-    $('.counter').html('140');
+const formReset = () => {
+  $('#submit-tweet').trigger("reset");
+  $('.counter').html('140');
+}
+
+const formValidation = () => {
+  if($('.counter').val() < 0) {
+    $('.error').html('Easy cowboy, that is too many characters').fadeOut(4000)
+    return false
   }
+
+  if($('.counter').val() === '140') {
+    $('.error').html('You tried to tweet nothing. Please add some content : )').fadeOut(4000)
+    return false
+  }
+
+  return true
+}
 
 
 $(document).ready(function () {
@@ -35,13 +49,12 @@ $(document).ready(function () {
     let newElement =
       `<article class="tweet">
       <div class ="tweet-card">
-        <header> 
-          <div>
-            <span class="avatar">
-            <img src="${obj.user.avatars}"></span>
-            <span class="tweetBy">${obj.user.name}</span>
+        <header>
+            <span> <img src="${obj.user.avatars}"></span>
+          <div class="user-info">
+            <span>${obj.user.name}</span>
+            <span>${obj.user.handle}</span>
           </div>
-          <div class="tweetByhandle">${obj.user.handle}</div>
         </header>
         <div class="tweet-content">${escape(obj.content.text)}
         </div>
@@ -72,24 +85,19 @@ $(document).ready(function () {
       event.preventDefault();
     }
 
-    if($('.counter').val() < 0) {
-      return $('.error').html('Easy cowboy, that is too many characters').fadeOut(4000)
-    }
+    if (formValidation()) {
 
-    if($('.counter').val() === '140') {
-      return $('.error').html('You tried to tweet nothing. Please add some content : )').fadeOut(4000)
-    }
-
-
-    $.post('/tweets', ($(this).serialize())).done(() => {
-      $.get('/tweets').done((data) => {
-        $('.feed').prepend(createTweetElement((data[data.length - 1]))).hide().fadeIn('slow')
+      $.post('/tweets', ($(this).serialize())).done(() => {
+       
+        $.get('/tweets').done((data) => {
+          $('.feed').prepend(createTweetElement((data[data.length - 1]))).hide().fadeIn('slow')
+        });
       });
-    });
 
-    formReset()
-
+      formReset()
+    }
   });
+
 
   // Focus on tweet text area when write a new tweet icon is selected
   $('.fa-solid.fa-angles-down').on('click', () => {
@@ -98,5 +106,6 @@ $(document).ready(function () {
   
   })
 
+  
   loadTweets();
 });
