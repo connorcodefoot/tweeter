@@ -29,6 +29,6 @@ This app was build as part of a Lighthouse Labs project. The goal of the project
 
 ## Images
 
-![Desktop View] (https://github.com/connorcodefoot/tweeter/blob/master/Docs/Desktop.png)
+!["Desktop View"](https://github.com/connorcodefoot/tweeter/blob/master/Docs/Desktop.png)
 
-![Phone/Table Portrait View]  (https://github.com/connorcodefoot/tweeter/blob/master/Docs/Phone:Tablet%20Portrait.png)
+!["Phone/Table Portrait View"](https://github.com/connorcodefoot/tweeter/blob/master/Docs/Phone:Tablet%20Portrait.png)
