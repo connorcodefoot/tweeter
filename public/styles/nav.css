@@ -10,7 +10,6 @@ nav {
   position: fixed;
   color: #fff;
   z-index: 2;
-
 }
 
 #logo {
@@ -29,16 +28,17 @@ nav {
   animation: updown 2s ease infinite;
 }
 
+/* Animation for nav write new tweet icon */
 @keyframes updown {
-0% {
-  transform: translateY(-50%);
-}
+  0% {
+    transform: translateY(-50%);
+  }
 
-50% {
-  transform: translateY(50%);
-}
+  50% {
+    transform: translateY(50%);
+  }
 
-100% {
-  transform: translateY(-50%);
-}
+  100% {
+    transform: translateY(-50%);
+  }
 }
