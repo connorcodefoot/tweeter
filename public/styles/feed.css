@@ -9,14 +9,14 @@
 
 article.tweet {
   display: flex;
+  justify-content: center;
   width: 90%;
   margin: 2em 2em 1em 2em;
-  justify-content: center;
-  border: 3px, ;
-  border-color: #4056A1;
-  border-radius: 30px;
   background-color: inherit;
+  border: 3px;
+  border-color: #4056A1;
   border-style: solid;
+  border-radius: 30px;
   transition: all .5s ease-in-out;
   z-index: 1;
 }
@@ -26,17 +26,26 @@ article.tweet:hover {
 }
   
 .tweet-card{
-  padding: 1em 1em 1em 1em;
   min-width: 100%;
+  padding: 1em 1em 1em 1em;
 }
 
 article.tweet header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  height: 100px;
+  align-items: center;
+}
+
+.user-info{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content:space-between;
+  padding: 10px;
 }
 
 article.tweet .tweet-content {
-  height: 90px;
   min-width: 100%;
   overflow-wrap: break-word;
 }
