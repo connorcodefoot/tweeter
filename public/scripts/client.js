@@ -83,5 +83,12 @@ $(document).ready(function () {
 
   });
 
+  // Focus on tweet text area when write a new tweet icon is selected
+  $('.fa-solid.fa-angles-down').on('click', () => {
+  
+    $('#tweet-text').focus()
+  
+  })
+
   loadTweets();
 });
