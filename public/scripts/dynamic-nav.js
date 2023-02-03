@@ -1,15 +1,18 @@
 
-// $(document).ready(function () {
+$(document).ready(function () {
 
-//   $(window).scroll(function() {
-//     if($(window).scrollTop() > 50) {
-//       $('nav').css('background-color', '#4056A1')
-//       $('nav').css('color', '#fff')
-//     } else {
-//       $('nav').css('background-color', 'transparent')
-//       $('nav').css('color', '#999999')
+  const mediaQuery = window.matchMedia('(min-width: 768px)');
+  console.log(window.matchMedia)
 
-//     }
-//   });
-
-// })
+  if (mediaQuery) {
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 50) {
+        $('nav').css('background-color', '#4056A1');
+        $('.nav-menu').css('visibility', 'hidden')
+      } else {
+        $('nav').css('background-color', '');
+        $('.nav-menu').css('visibility', '')
+      }
+    })
+  }
+});
