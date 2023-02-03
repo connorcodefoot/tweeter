@@ -9,9 +9,36 @@ nav {
   font-family: 'Source Sans Pro', sans-serif;
   position: fixed;
   color: #fff;
+  z-index: 2;
 
 }
 
 #logo {
   font-family: 'Bungee', sans-serif;
+}
+
+.nav-menu {
+  visibility: visible;
+}
+
+.fa-solid.fa-angles-down {
+  cursor: pointer;
+  position: fixed;
+  height: 5px;
+  width: 5px;
+  animation: updown 2s ease infinite;
+}
+
+@keyframes updown {
+0% {
+  transform: translateY(-50%);
+}
+
+50% {
+  transform: translateY(50%);
+}
+
+100% {
+  transform: translateY(-50%);
+}
 }
