@@ -1,18 +1,5 @@
-
-.feed {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-}
-
 article.tweet {
-  display: flex;
-  justify-content: center;
-  width: 90%;
   margin: 2em 2em 1em 2em;
-  background-color: inherit;
   border: 3px;
   border-color: #4056A1;
   border-style: solid;
@@ -21,11 +8,11 @@ article.tweet {
   z-index: 1;
 }
 
-article.tweet:hover { 
+article.tweet:hover {
   transform: scale(1.05);
 }
-  
-.tweet-card{
+
+.tweet-card {
   min-width: 100%;
   padding: 1em 1em 1em 1em;
 }
@@ -37,11 +24,11 @@ article.tweet header {
   align-items: center;
 }
 
-.user-info{
+.user-info {
   display: flex;
   width: 100%;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content: space-between;
   padding: 10px;
 }
 
@@ -57,10 +44,10 @@ article.tweet footer {
   font-size: .75em;
 }
 
-article.tweet footer .tweet-card-icons i{
+article.tweet footer .tweet-card-icons i {
   padding: 5px;
 }
 
-article.tweet footer .tweet-card-icons i:hover{
+article.tweet footer .tweet-card-icons i:hover {
   color: orange;
 }
