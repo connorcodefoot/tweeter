@@ -1,13 +1,24 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+
+ // XSS prevention function
+ 
+ const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+  };
+
+// Resets tweet form text and counter
+  const formReset = () => {
+    $('#submit-tweet').trigger("reset");
+    $('.counter').html('140');
+  }
+
 
 $(document).ready(function () {
 
-  function loadTweets() {
 
+  // Get all tweets stored in mem db and call render
+  function loadTweets() {
     $.get('/tweets')
     .done((data) => {
       renderTweets(data);
@@ -19,7 +30,6 @@ $(document).ready(function () {
   };
 
   // Receives an object, outputs a block of html that uses data from the object.
-
   function createTweetElement(obj) {
 
     let newElement =
@@ -33,7 +43,7 @@ $(document).ready(function () {
           </div>
           <div class="tweetByhandle">${obj.user.handle}</div>
         </header>
-        <div class="tweet-content"><h4>${obj.content.text}</h4>
+        <div class="tweet-content">${escape(obj.content.text)}
         </div>
         <hr>
         <footer>
@@ -77,9 +87,7 @@ $(document).ready(function () {
       });
     });
 
-    // Reset Form and counter
-    $('#submit-tweet').trigger("reset");
-    $('.counter').html('140');
+    formReset()
 
   });
 
