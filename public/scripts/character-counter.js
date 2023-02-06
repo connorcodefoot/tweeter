@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
   // This function tracks the number of characters a user has entered and adjusts the user facing character count accordingly
 
   $('#tweet-text').on('input', function () {
@@ -13,5 +12,5 @@ $(document).ready(function () {
     } else {
       $('.counter').css('color', '');
     }
-  })
+  });
 });
