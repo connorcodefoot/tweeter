@@ -9,7 +9,7 @@ article.tweet {
 }
 
 article.tweet:hover {
-  transform: scale(1.05);
+  box-shadow: 5px 5px orange;
 }
 
 .tweet-card {
@@ -51,3 +51,4 @@ article.tweet footer .tweet-card-icons i {
 article.tweet footer .tweet-card-icons i:hover {
   color: orange;
 }
+
