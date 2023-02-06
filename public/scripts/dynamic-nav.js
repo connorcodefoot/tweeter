@@ -1,5 +1,4 @@
 
-
 $(document).ready(function () {
 
   // Display nav differently and change dynamic styles based on media width 
