@@ -16,13 +16,16 @@ const formReset = () => {
 // Validate form input. Checks for character count or empty field. Serves the user an error message if either errors occur and returns validation false, preventing the user submitting the tweet.
 
 const formValidation = () => {
+
   if ($('.counter').val() < 0) {
-    $('.error').html('Easy cowboy, that is too many characters').fadeOut(4000);
+    $('.error').html('Easy cowboy, that is too many characters')
+    setTimeout(() => { $('.error').html('')}, 3000)
     return false;
   }
 
   if ($('.counter').val() === '140') {
-    $('.error').html('You tried to tweet nothing. Please add some content : )').fadeOut(4000);
+    $('.error').html('You tried to tweet nothing. Please add some content : )')
+    setTimeout(() => { $('.error').html('')}, 3000)
     return false;
   }
 
